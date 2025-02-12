@@ -3,7 +3,13 @@
  * Create a function named `printName`
  * - take a name as a parameter
  * - that just prints that name on the screen
+ *
+ *
  */
+
+function printName(name) {
+  console.log(name);
+}
 
 /**
  * Task 2:
@@ -12,6 +18,12 @@
  * - and prints the age on the screen.
  * - Age = current year - birth
  */
+
+function printAge(birthYear) {
+  let currentYear = new Date().getFullYear();
+  let age = currentYear - birthYear;
+  console.log(age);
+}
 
 /**
  * Task 3:
@@ -24,6 +36,25 @@
  * -- tr: it should print `Merhaba NAME`
  */
 
+// Create a function named printHello
+function printHello(name, language) {
+  let greeting;
+
+  if (language === "en") {
+    greeting = "Hello";
+  } else if (language === "es") {
+    greeting = "Hola";
+  } else if (language === "fr") {
+    greeting = "Bonjour";
+  } else if (language === "tr") {
+    greeting = "Merhaba";
+  } else {
+    greeting = "Hello";
+  }
+
+  console.log(`${greeting} ${name}`);
+}
+
 /**
  * Task 4:
  * Create a function named `printMax`
@@ -31,11 +62,19 @@
  * - should print out the bigger number
  */
 
+function printMax(num1, num2) {
+  if (num1 > num2) {
+    console.log(num1);
+  } else {
+    console.log(num2);
+  }
+}
+
 // TODO: Uncomment these functions as you work on them
 // Make sure they're all uncommented before you push your solution!
 module.exports = {
-  // printName,
-  // printAge,
-  // printHello,
-  // printMax,
+  printName,
+  printAge,
+  printHello,
+  printMax,
 };
